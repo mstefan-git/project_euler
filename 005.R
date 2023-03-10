@@ -1,3 +1,5 @@
+rm(list = ls())
+
 # Problem 5: Smallest multiple
 
 # 2520 is the smallest number that can be divided by each of the numbers 
@@ -6,27 +8,10 @@
 
 n_max <- 20
 
-
-find_factors <- function(n) {
-  d <- 2
-  factors <- c()
-  q <- n
-  while (TRUE) {
-    if (q %% d == 0) {
-      q <- q / d
-      factors <- c(factors, d)
-    } else {
-      d <- d+1
-    }
-    if (q == 1) {
-      break
-    }
-  }  
-  return(factors)
-}
+source("functions/primes.R")
 
 find_smallest_common_multiple <- function(numbers) {
-  individual_factors <- sapply(numbers, find_factors)
+  individual_factors <- sapply(numbers, find_prime_factors)
   shared_factors <- c()
   for (i in individual_factors) {
     temp <- shared_factors

@@ -1,3 +1,5 @@
+rm(list = ls())
+
 # Problem 4: Largest palindrome product
 
 # A palindromic number reads the same both ways. The largest palindrome 
