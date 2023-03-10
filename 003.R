@@ -4,17 +4,21 @@
 # What is the largest prime factor of the number 600851475143 ?
 
 find_prime_factors <- function(n) {
-  prime_factors <- c()
-  for (p in 2:floor(sqrt(n))) {
-    # check if p divides n without a remainder
-    if (n %% p == 0) {
-      # check that p is not a multiple of previously found prime factors
-      if (all(p %% prime_factors != 0)) {
-        prime_factors <- c(prime_factors, p)
-      }
+  d <- 2
+  factors <- c()
+  q <- n
+  while (TRUE) {
+    if (q %% d == 0) {
+      q <- q / d
+      factors <- c(factors, d)
+    } else {
+      d <- d+1
     }
-  }
-  return(prime_factors)
+    if (q == 1) {
+      break
+    }
+  }  
+  return(unique(factors))
 }
 
 find_prime_factors(10)
