@@ -1,9 +1,9 @@
-# Challenge 3: Largest prime factor
+# Problem 3: Largest prime factor
 
 # The prime factors of 13195 are 5, 7, 13 and 29.
 # What is the largest prime factor of the number 600851475143 ?
 
-find_prime_factors <- function(n) {
+find_factors <- function(n) {
   d <- 2
   factors <- c()
   q <- n
@@ -18,6 +18,11 @@ find_prime_factors <- function(n) {
       break
     }
   }  
+  return(factors)
+}
+
+find_prime_factors <- function(n) {
+  factors <- find_factors(n)
   return(unique(factors))
 }
 
