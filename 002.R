@@ -20,4 +20,3 @@ even_fibonacci <- function(n_max) {
 }
 
 even_fibonacci(4000000)
-
