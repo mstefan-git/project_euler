@@ -17,17 +17,17 @@ is_palindrome <- function(n) {
 }
 
 largest_palindrome <- function(n_digits) {
-  x <- 0
+  n <- 0
   numbers <- 1:(10^n_digits-1)
-  for (i in numbers) {
-    for (j in numbers) {
-      y <- i*j
-      if (is_palindrome(y) & y > x) {
-        x <- y
+  for (n1 in numbers) {
+    for (n2 in numbers) {
+      p <- n1*n2
+      if (is_palindrome(p) & p > n) {
+        n <- p
       }
     }
   }
-  return(x)
+  return(n)
 }
 
 largest_palindrome(1)

@@ -38,6 +38,7 @@ find_prime_numbers <- function(n = 1e6) {
 }
 
 
+
 find_prime_factors <- function(n) {
   
   # Find a number's prime factors using a while loop
@@ -84,4 +85,5 @@ find_prime_factors <- function(n) {
   
   # return the prime factors
   return(factors)
+  
 }

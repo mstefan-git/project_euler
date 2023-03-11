@@ -8,17 +8,6 @@ rm(list = ls())
 # By considering the terms in the Fibonacci sequence whose values 
 # do not exceed four million, find the sum of the even-valued terms.
 
-even_fibonacci <- function(n_max) {
-  i <- 1
-  j <- 2
-  f <- c(i,j)
-  while (TRUE) {
-    if (i+j > n_max) break
-    f <- c(f, i+j)
-    i <- j
-    j <- f[length(f)]
-  }
-  return(sum(f[f %% 2 == 0]))
-}
-
-even_fibonacci(4000000)
+source("functions/fibonacci.R")
+f <- fibonacci(4000000)
+sum(f[f %% 2 == 0])
