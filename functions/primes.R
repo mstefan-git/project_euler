@@ -87,3 +87,37 @@ find_prime_factors <- function(n) {
   return(factors)
   
 }
+
+
+
+find_number_of_divisors <- function(n) {
+
+  # Find a natural number's number of divisors.
+  #
+  # Args:
+  # - n: the number for which to find the number of divisors
+  # 
+  # Returns:
+  # - number of divisors
+  
+  # error handling
+  if (!is.numeric(n) || length(n) != 1 || n != round(n) || n < 1) {
+    stop("Argument 'n' must be a natural number.")
+  }
+  
+  # trivial case (no prime factorization possible)
+  if (n == 1) return(1)
+
+  # explanation for larger numbers:
+  # 120 is prime-factorized as 2^3 * 3^1 * 5^1
+  # The exponents are 3, 1 and 1.
+  # If we add 1 to each of them and then multiply them,
+  # we can infer the number of divisors of 120:
+  # (3+1) * (1+1) * (1+1) = 16
+
+  prime_factors <- find_prime_factors(n)
+  exponents <- table(prime_factors)
+  n_divisors <- prod(exponents + 1)
+  return(n_divisors)
+
+}
