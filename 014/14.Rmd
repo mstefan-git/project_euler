@@ -2,7 +2,9 @@
 title: "Problem 14: Longest Collatz sequence"
 author: "Martin Stefan"
 date: "2023-03-13"
-output: html_document
+output: 
+  html_document:
+    keep_md: true
 ---
 
 ```{r setup, include=FALSE}
