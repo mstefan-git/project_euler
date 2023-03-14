@@ -1,16 +1,4 @@
----
-title: "Problem 14: Longest Collatz sequence"
-author: "Martin Stefan"
-date: "2023-03-13"
-output: 
-  html_document
----
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, comment = NA)
-```
-
-## The problem
+# 14: Longest Collatz sequence
 
 The following iterative sequence is defined for the set of positive integers:
 
@@ -189,7 +177,7 @@ best_solution(999999)
 
 ## Speed comparison
 
-```{r, echo = FALSE}
+```{r, echo = FALSE, eval = FALSE}
 magnitudes <- 1:15
 
 approach1 <- sapply(magnitudes, function(x) system.time(brute_force(2^x)))

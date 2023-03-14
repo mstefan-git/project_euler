@@ -1,0 +1,7 @@
+book_filename: project-euler-in-r
+delete_merged_file: true
+output_dir: compiled
+rmd_files:
+- index.Rmd
+- p014.Rmd
+new_session: true

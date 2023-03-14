@@ -1,0 +1,11 @@
+bookdown::gitbook:
+
+  number_sections: false
+  
+  css: _style.css
+  
+  config:
+      search:   false        # no search button
+      download: false        # no download button
+      info:     false        # no info button
+      sharing:  false        # no social media button
