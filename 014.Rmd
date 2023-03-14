@@ -177,7 +177,7 @@ best_solution(999999)
 
 ## Speed comparison
 
-```{r, echo = FALSE, cache = TRUE}
+```{r, echo = FALSE}
 magnitudes <- 1:15
 
 approach1 <- sapply(magnitudes, function(x) system.time(brute_force(2^x)))
